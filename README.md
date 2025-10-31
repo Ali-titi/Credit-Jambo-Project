@@ -119,7 +119,7 @@ You’ll run each server independently on different terminals:
 |-------|------------|
 | Frontend | React.js |
 | Backend | Node.js + Express |
-| Database | PostgreSQL |
+| Database | MongoDB |
 | Auth | JWT |
 
 ---
