@@ -5,9 +5,7 @@ const registerSchema = Joi.object({
   fullName: Joi.string().min(3).max(50).required(),
   email: Joi.string().email().required(),
   phoneNumber: Joi.string().pattern(/^[0-9+\-\s()]+$/).min(10).max(15).required(),
-  password: Joi.string().min(8).required(),
-  deviceId: Joi.string().required(),
-  deviceName: Joi.string().optional()
+  password: Joi.string().min(8).required()
 });
 
 const loginSchema = Joi.object({

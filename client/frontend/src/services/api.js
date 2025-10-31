@@ -16,6 +16,7 @@ export const getDeviceId = () => {
 // Create axios instance
 const api = axios.create({
   baseURL: API_URL,
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -55,7 +56,7 @@ api.interceptors.response.use(
 
 // Auth APIs
 export const authAPI = {
-  register: (data) => api.post('/auth/register', { ...data, deviceId: getDeviceId() }),
+  register: (data) => api.post('/auth/register', { ...data }),
   login: (data) => api.post('/auth/login', { ...data, deviceId: getDeviceId() }),
   getProfile: () => api.get('/auth/profile'),
   logout: () => api.post('/auth/logout')
